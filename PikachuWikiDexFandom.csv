@@ -1,0 +1,6 @@
+,PS,Ataque,Defensa,At. especial,Def. especial,Velocidad
+PE,0.0,0.0,0.0,0.0,0.0,2.0
+Base,35.0,55.0,405.0,50.0,506.0,90.0
+Máximos (naturaleza desfavorable),274.0,188.0,1617.0,179.0,1798.0,251.0
+Máximos (naturaleza neutra),274.0,209.0,1799.0,199.0,19910.0,279.0
+Máximos (naturaleza favorable),274.0,229.0,19611.0,218.0,21812.0,306.0
