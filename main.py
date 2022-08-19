@@ -1,3 +1,4 @@
+import json
 import unittest
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -6,31 +7,11 @@ from selenium.common import NoSuchElementException
 from selenium.webdriver.common.by import By
 import re
 
-index = 0
+index = 2
 
-settings = [
-    {
-        'url': "https://material.angular.io/components/table/overview",
-        'xpath': '//*[@id="table-pagination"]/div/div[2]/table-pagination-example/div/table/',
-        'xColumn': 'Name',
-        'hasPaginator': True,
-        'xpathPaginator': '//*[@id="table-pagination"]/div/div[2]/table-pagination-example/div/mat-paginator/div/div/div[2]/button[3]'
-    },
-    {
-        'url': 'https://pokemon.fandom.com/es/wiki/Pikachu',
-        'xpath': '//div[@id="mw-content-text"]/div/table[@class="estadisticas"]/',
-        'xColumn': None,
-        'hasPaginator': False
-    },
-    {
-        'url': 'https://es.wikipedia.org/wiki/Santos_F%C3%BAtbol_Club',
-        'xColumn': 'Jugador',
-        'hasPaginator': False,
-        'xpath': '//*[@id="mw-content-text"]/div[1]/table[8]/'
-    }
-]
-
-conf = settings[index]
+file = open('info.json')
+settings = json.load(file)
+conf = settings['settings'][index]
 
 
 class TableTest(unittest.TestCase):
